@@ -1,3 +1,26 @@
 // ==========================================================================
 // vars.scss
 // ==========================================================================
+
+//backgrounds
+$background-image: url("/src/assets/images/back.png");
+
+// colors
+
+$white: #D1D1D1;
+$grd-1: linear-gradient(145.75deg, #0B1B3D 7.95%, #0F1E47 87.48%);
+$grd-2: linear-gradient(180deg, #2A4079 0%, #2F4376 100%);
+$grd-3: linear-gradient(200.73deg, #283967 21.18%, #1A2950 99.36%);
+$box-shadow-1: 1px 7px 33px 21px rgba(0, 0, 0, 0.25);
+$text-shadow-1: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+// fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Chakra+Petch:ital,wght@0,400;1,500&display=swap');
+
+$font-family: 'Chakra Petch', sans-serif;
+$font-family-secondary: 'Bangers', cursive;
+
+// transitions
+$transition: all 0.3s ease-in-out;
