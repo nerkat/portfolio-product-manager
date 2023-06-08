@@ -2,3 +2,30 @@
 // helpers.scss
 // ==========================================================================
 
+.hide-tablet {
+    @media (max-width: 1250px) {
+        display: none !important;
+    }
+}
+
+.hide-mobile {
+    @media (max-width: 900px) {
+        display: none !important;
+    }
+}
+
+.show-tablet {
+    display: none !important;
+
+    @media (max-width: 1250px) and (min-width: 900px) {
+        display: flex !important;
+    }
+}
+
+.show-mobile {
+    display: none !important;
+
+    @media (max-width: 900px) {
+        display: flex !important;
+    }
+}
