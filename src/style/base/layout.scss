@@ -54,6 +54,8 @@ body {
     overflow-y: auto;
     height: calc(100svh - 124px);
     flex-wrap: wrap;
+    max-width: 1440px;
+    margin: auto;
 
 
     &::-webkit-scrollbar {
