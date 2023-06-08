@@ -54,9 +54,7 @@ body {
     overflow-y: auto;
     height: calc(100svh - 124px);
     flex-wrap: wrap;
-    max-width: 1440px;
-    margin: auto;
-
+    justify-content: center;
 
     &::-webkit-scrollbar {
         width: 5px;
@@ -85,6 +83,7 @@ body {
     height: fit-content;
     width: 100%;
     min-width: 350px;
+    max-width: 500px;
 }
 
 .card {
@@ -195,14 +194,13 @@ body {
             gap: 35px;
             padding: 20px 25px;
 
-            div {
+            &>a {
                 display: flex;
                 flex: 1;
                 overflow: hidden;
                 border-radius: 15px;
                 box-shadow: $box-shadow-2;
                 transition: $transition;
-                cursor: pointer;
 
                 &:hover {
                     transform: scale(1.05);
@@ -229,7 +227,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
 
         &:hover {
             img:not(.icon) {
@@ -252,7 +249,6 @@ body {
 
     &.link {
         position: relative;
-        cursor: pointer;
 
         &:hover {
             &>img {
@@ -295,7 +291,6 @@ body {
         gap: 40px;
 
         img {
-            cursor: pointer;
             transition: $transition;
 
             &:hover {
