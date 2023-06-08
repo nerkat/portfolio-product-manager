@@ -53,9 +53,9 @@ body {
     padding: 62px;
     overflow-y: auto;
     height: calc(100svh - 124px);
+    flex-wrap: wrap;
 
 
-    //scrollbar
     &::-webkit-scrollbar {
         width: 5px;
         background: $grd-3;
@@ -81,7 +81,8 @@ body {
     gap: 35px;
     flex: 1;
     height: fit-content;
-    max-width: calc(100%/3);
+    width: 100%;
+    min-width: 350px;
 }
 
 .card {
@@ -91,14 +92,21 @@ body {
     box-shadow: $box-shadow-1;
     border-radius: 25px;
     overflow: hidden;
+    position: relative;
+
+
 
     .avatar {
         position: relative;
+        display: flex;
+        overflow: hidden;
 
         &:hover {
             img {
                 transform: scale(1.05);
             }
+
+
         }
 
         img {
@@ -117,7 +125,39 @@ body {
 
     .highlight {
         background: $grd-3;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1px;
+            width: 0%;
+            transition: $transition;
+            background: $grd-4;
+            z-index: 1;
+        }
+
+        &::after {
+            top: auto;
+            bottom: 0;
+            left: auto;
+            right: 0;
+        }
     }
+
+    &:hover {
+        .highlight {
+
+            &::after,
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+
 
     .content-box {
         padding: 20px;
@@ -156,6 +196,7 @@ body {
             div {
                 display: flex;
                 flex: 1;
+                overflow: hidden;
                 border-radius: 15px;
                 box-shadow: $box-shadow-2;
                 transition: $transition;
@@ -166,8 +207,9 @@ body {
                 }
 
                 img {
-                    object-fit: contain;
-                    width: 100%;
+                    object-fit: cover;
+                    max-height: 100%;
+                    max-width: 100%;
                 }
             }
         }
@@ -215,7 +257,7 @@ body {
                 transform: scale(1.05);
             }
         }
-        
+
 
         .icon-box {
             background: $grd-2;
@@ -258,5 +300,20 @@ body {
                 transform: scale(1.1);
             }
         }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 32px;
+        height: calc(100svh - 64px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+        height: calc(100svh - 32px);
     }
 }
