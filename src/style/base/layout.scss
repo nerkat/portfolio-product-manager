@@ -39,15 +39,16 @@ p {
 }
 
 body {
-    background-image: $background-image, $grd-1;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-image: $grd-1;
 }
 
 
 .container {
-    display: flex;
+    background-image: $background-image;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
     gap: 35px;
     height: 100%;
     padding: 62px;
@@ -55,6 +56,7 @@ body {
     height: calc(100svh - 124px);
     flex-wrap: wrap;
     justify-content: center;
+
 
     &::-webkit-scrollbar {
         width: 5px;
@@ -94,8 +96,6 @@ body {
     border-radius: 25px;
     overflow: hidden;
     position: relative;
-
-
 
     .avatar {
         position: relative;
