@@ -96,6 +96,15 @@ body {
     border-radius: 25px;
     overflow: hidden;
     position: relative;
+    animation: fadeIn 1s ease-in-out;
+
+    &.anim-2 {
+        animation: fadeIn-2 2s ease-in-out;
+    }
+
+    &.no-anim {
+        animation: none;
+    }
 
     .avatar {
         position: relative;
