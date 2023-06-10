@@ -137,6 +137,20 @@ body {
         background: $grd-3;
         position: relative;
 
+        &:first-child {
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &:last-child {
+
+            &::after {
+                display: none;
+            }
+        }
+
         &::after,
         &::before {
             content: "";
