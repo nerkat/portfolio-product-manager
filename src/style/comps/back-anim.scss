@@ -1,6 +1,9 @@
 .back-anim {
     opacity: 0.7;
     pointer-events: none;
+    z-index: -1;
+    position: relative;
+    display: none;
 
     svg {
         position: fixed;

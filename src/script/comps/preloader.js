@@ -2,4 +2,5 @@
 window.addEventListener('load', () => {
     document.querySelector('.preloader').style.display = 'none';
     document.querySelector('.container').style.display = 'flex';
+    document.querySelector('.back-anim').style.display = 'flex';
 })
