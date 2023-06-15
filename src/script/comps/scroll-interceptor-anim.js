@@ -3,7 +3,7 @@ if (window.innerWidth <= 768) {
     let options = {
         root: null, // use the viewport
         rootMargin: '0px', // % or px - offsets added to each side of the intersection root
-        threshold: 0.75 // percentage of the target element which is visible
+        threshold: 0.65 // percentage of the target element which is visible
     };
 
     let observer = new IntersectionObserver((entries, observer) => {
