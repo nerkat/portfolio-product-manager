@@ -162,6 +162,10 @@ body {
     }
 
     &.anim-2 {
+        .hover-box {
+            transform: scaleY(-1);
+        }
+
         animation: fadeIn-2 2s ease-in-out;
     }
 
