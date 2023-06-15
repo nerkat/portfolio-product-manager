@@ -93,10 +93,18 @@ body {
     flex-direction: column;
     background: $grd-2;
     box-shadow: $box-shadow-1;
-    border-radius: 25px;
-    overflow: hidden;
     position: relative;
     animation: fadeIn 1s ease-in-out;
+    border-radius: 25px;
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        border-radius: 25px;
+        overflow: hidden;
+        z-index: 1;
+        position: relative;
+    }
 
     &.anim-2 {
         animation: fadeIn-2 2s ease-in-out;
@@ -273,9 +281,58 @@ body {
     &.link {
         position: relative;
 
+        .hover-box {
+            border-radius: 25px;
+            overflow: hidden;
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            transition: $transition;
+
+            &::after,
+            &::before {
+                content: "";
+                background: $grd-4;
+                position: absolute;
+                top: auto;
+                bottom: 0;
+                left: 0;
+                right: auto;
+                width: 100%;
+                height: 100%;
+                transition: $transition;
+                transform: scale(0, 0);
+                transform-origin: bottom left;
+            }
+
+            &::before {
+                top: 0;
+                bottom: auto;
+                left: auto;
+                right: 0;
+                transform-origin: top right;
+            }
+
+
+        }
+
+
         &:hover {
-            &>img {
+            img:not(.icon) {
                 transform: scale(1.05);
+            }
+
+            .hover-box {
+
+                &::after {
+                    transform: scale(1, 1);
+                }
+
+                &::before {
+                    transform: scale(1, 1);
+                }
             }
         }
 
