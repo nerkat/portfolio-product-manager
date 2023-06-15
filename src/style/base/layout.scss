@@ -251,6 +251,10 @@ body {
                 width: 100%;
             }
         }
+
+        .zoom-image {
+            transform: scale(1.05);
+        }
     }
 
 
@@ -322,11 +326,6 @@ body {
         align-items: center;
         overflow: visible;
 
-        &:hover {
-            img:not(.icon) {
-                transform: scale(1.05);
-            }
-        }
 
         .icon {
             position: absolute;
@@ -343,13 +342,6 @@ body {
 
     &.link {
         overflow: visible;
-
-
-        &:hover {
-            img:not(.icon) {
-                transform: scale(1.05);
-            }
-        }
 
 
         .icon-box {
