@@ -119,6 +119,8 @@ body {
         right: -2px;
         bottom: -2px;
         transition: $transition;
+        will-change: transform;
+
 
         &::after,
         &::before {
