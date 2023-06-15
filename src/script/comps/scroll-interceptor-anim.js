@@ -11,7 +11,9 @@ if (window.innerWidth <= 768) {
             // If the element is visible
             if (entry.isIntersecting) {
                 // Add a class
-                entry.target.classList.add('hover');
+                setTimeout(() => {
+                    entry.target.classList.add('hover');
+                }, 200);
             } else {
                 // If not visible
                 // Remove the class
