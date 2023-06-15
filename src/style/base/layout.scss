@@ -89,6 +89,7 @@ body {
 }
 
 .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     background: $grd-2;
@@ -96,6 +97,7 @@ body {
     position: relative;
     animation: fadeIn 1s ease-in-out;
     border-radius: 25px;
+    overflow: hidden;
 
     .card-content {
         display: flex;
@@ -104,6 +106,59 @@ body {
         overflow: hidden;
         z-index: 1;
         position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hover-box {
+        border-radius: 25px;
+        overflow: hidden;
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        transition: $transition;
+
+        &::after,
+        &::before {
+            content: "";
+            background: $grd-4;
+            position: absolute;
+            top: auto;
+            bottom: 0;
+            left: 0;
+            right: auto;
+            width: 100%;
+            height: 100%;
+            transition: $transition;
+            transform: scale(0, 0);
+            transform-origin: bottom left;
+        }
+
+        &::before {
+            top: 0;
+            bottom: auto;
+            left: auto;
+            right: 0;
+            transform-origin: top right;
+        }
+
+
+    }
+
+    &:hover {
+
+        .hover-box {
+
+            &::after {
+                transform: scale(1, 1);
+            }
+
+            &::before {
+                transform: scale(1, 1);
+            }
+        }
     }
 
     &.anim-2 {
@@ -254,10 +309,10 @@ body {
     }
 
     &.video {
-        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: visible;
 
         &:hover {
             img:not(.icon) {
@@ -279,60 +334,12 @@ body {
     }
 
     &.link {
-        position: relative;
-
-        .hover-box {
-            border-radius: 25px;
-            overflow: hidden;
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            transition: $transition;
-
-            &::after,
-            &::before {
-                content: "";
-                background: $grd-4;
-                position: absolute;
-                top: auto;
-                bottom: 0;
-                left: 0;
-                right: auto;
-                width: 100%;
-                height: 100%;
-                transition: $transition;
-                transform: scale(0, 0);
-                transform-origin: bottom left;
-            }
-
-            &::before {
-                top: 0;
-                bottom: auto;
-                left: auto;
-                right: 0;
-                transform-origin: top right;
-            }
-
-
-        }
+        overflow: visible;
 
 
         &:hover {
             img:not(.icon) {
                 transform: scale(1.05);
-            }
-
-            .hover-box {
-
-                &::after {
-                    transform: scale(1, 1);
-                }
-
-                &::before {
-                    transform: scale(1, 1);
-                }
             }
         }
 
