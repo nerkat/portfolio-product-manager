@@ -13,7 +13,7 @@
   .loader_spokes,
   .loader_spokes-spin,
   .loader_tire {
-  animation: bikeBody 3s ease-in-out infinite;
+  animation: bikeBody 8s ease-in-out infinite;
   stroke: var(--primary);
   transition: stroke var(--trans-dur);
 }

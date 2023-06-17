@@ -5,7 +5,7 @@
   --paper: #EEF0FD;
   --text: #D3D4EC;
   --tool: #FBC56C;
-  --duration: 3s;
+  --duration: 3.5s;
   position: relative;
   -webkit-animation: bounce05 var(--duration) linear infinite;
   animation: bounce05 var(--duration) linear infinite;
