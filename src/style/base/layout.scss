@@ -381,7 +381,7 @@ rocket-anim {
     position: absolute;
     top: -59px;
     right: 17px;
-    transform: scale(0.25) rotate(-100deg);
+    transform: scale(0.25) rotate(247deg);
     opacity: 0.8;
 }
 
@@ -414,20 +414,20 @@ monalisa-anim {
 
 hand-anim {
     position: absolute;
-    top: 28px;
+    top: 26px;
     z-index: 1;
-    right: 17px;
+    right: -17px;
     transform: scale(0.34);
     opacity: 0.9;
 }
 
 hamster-anim {
     position: absolute;
-    top: -63px;
+    top: -85px;
     z-index: 1;
     right: -59px;
     transform: scale(0.5);
-    opacity: 0.7;
+    opacity: .7;
 }
 
 
