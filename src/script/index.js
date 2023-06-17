@@ -1,11 +1,21 @@
+// style
 import '/src/style/index.scss';
 
+// anime
 import anime from 'animejs/lib/anime.es.js';
 window.anime = anime;
 
+// splide
+import Splide from '@splidejs/splide';
+new Splide('.splide').mount();
+import '@splidejs/splide/css/core';
+
+
+// partials
 import './partials/preloader.js';
 import './partials/back-anim.js';
 import './partials/video-play.js';
+import './partials/slider.js';
 import './partials/scroll-interceptor-anim.js';
 
 // web comps

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/nerkat/webpack-seed#readme",
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "animejs": "^3.2.1",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
