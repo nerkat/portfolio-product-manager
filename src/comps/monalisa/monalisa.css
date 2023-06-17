@@ -10,6 +10,7 @@
     dashOffset 5s linear infinite;
 }
 
+
 @keyframes dashArray {
   0% {
     stroke-dasharray: 0 1 359 0;
