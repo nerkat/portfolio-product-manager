@@ -5,6 +5,7 @@ window.anime = anime;
 
 import './partials/preloader.js';
 import './partials/back-anim.js';
+import './partials/video-play.js';
 import './partials/scroll-interceptor-anim.js';
 
 // web comps

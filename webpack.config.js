@@ -25,6 +25,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 { from: 'src/comps', to: 'comps' },
+                { from: 'src/assets/videos', to: 'videos' },
             ],
         }),
     ],
@@ -51,6 +52,13 @@ module.exports = {
                 type: 'asset/resource',
                 generator: {
                     filename: 'images/[name]-[hash][ext]'
+                }
+            },
+            {
+                test: /\.(mp4|mov|avi)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'videos/[name][ext]'
                 }
             }
         ],

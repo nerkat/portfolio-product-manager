@@ -1,29 +1,31 @@
-
+// Check if window width is 768px or less (typically mobile devices)
 if (window.innerWidth <= 768) {
+    // Set up options for Intersection Observer
     let options = {
-        root: null, // use the viewport
-        rootMargin: '0px', // % or px - offsets added to each side of the intersection root
-        threshold: 0.65 // percentage of the target element which is visible
+        root: null, // Setting root to null implies viewport
+        rootMargin: '0px', // Offset margins for the root. Can be % or px.
+        threshold: 0.65 // Percentage of the target element which needs to be visible for the callback to be invoked
     };
 
-    let observer = new IntersectionObserver((entries, observer) => {
+    // Instantiate the Intersection Observer
+    let observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // If the element is visible
+            // If the element is visible (i.e., intersecting), add the 'hover' class after a delay of 200ms
             if (entry.isIntersecting) {
-                // Add a class
                 setTimeout(() => {
                     entry.target.classList.add('hover');
                 }, 200);
             } else {
-                // If not visible
-                // Remove the class
+                // If the element is not visible, remove the 'hover' class
                 entry.target.classList.remove('hover');
             }
         });
     }, options);
 
-    // target all the elements with class 'someClass'
+    // Select all elements with the 'card' class
     let targets = document.querySelectorAll('.card');
+
+    // Start observing each 'card' element
     targets.forEach(target => {
         observer.observe(target);
     });
