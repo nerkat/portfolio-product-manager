@@ -25,3 +25,5 @@ import '../comps/rainbow/rainbow.js';
 import '../comps/monalisa/monalisa.js';
 import '../comps/hand/hand.js';
 import '../comps/hamster/hamster.js';
+import '../comps/bicycle/bicycle.js';
+import '../comps/typewriter/typewriter.js';

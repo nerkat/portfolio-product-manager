@@ -455,6 +455,24 @@ hamster-anim {
     opacity: .7;
 }
 
+bicycle-anim {
+    position: absolute;
+    top: 9px;
+    z-index: 1;
+    right: 39px;
+    transform: scale(0.25);
+    opacity: 0.7;
+}
+
+typewriter-anim {
+    position: absolute;
+    top: 25px;
+    z-index: 1;
+    right: -15px;
+    transform: scale(0.5);
+    opacity: 0.6;
+}
+
 
 @media (max-width: 1024px) {
     .container {
