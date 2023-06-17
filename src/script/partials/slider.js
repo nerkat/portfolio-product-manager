@@ -11,5 +11,10 @@ document.querySelectorAll('.splide').forEach(carousel => new Splide(carousel, {
     "pauseOnHover": false,
     "pauseOnFocus": false,
     "easing": "ease-in-out",
-    "perPage": 2
+    "perPage": 2,
+    breakpoints: {
+        900: {
+            perPage: 1,
+        },
+    }
 }).mount());
