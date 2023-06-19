@@ -1,9 +1,8 @@
 import Splide from '@splidejs/splide';
 
-document.querySelectorAll('.splide').forEach(carousel => new Splide(carousel, {
+Splide.defaults = {
     "type": "loop",
     "autoplay": true,
-    "speed": "1000",
     "arrows": false,
     "pagination": false,
     "interval": "5500",
@@ -12,9 +11,13 @@ document.querySelectorAll('.splide').forEach(carousel => new Splide(carousel, {
     "pauseOnFocus": false,
     "easing": "ease-in-out",
     "perPage": 2,
-    breakpoints: {
+    "perMove": 1,
+    "breakpoints": {
         900: {
-            perPage: 1,
+            "perPage": 1,
+            "perMove": 1
         },
     }
-}).mount());
+}
+
+document.querySelectorAll('.splide').forEach(carousel => new Splide(carousel).mount());
