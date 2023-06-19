@@ -1,0 +1,62 @@
+.orbit {
+  height: 186px;
+  width: 345px;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  animation: spin 10s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+.rocket {
+  background-color: #fafcf7;
+  height: 50px;
+  width: 25px;
+  border-radius: 50% 50% 0 0;
+  position: relative;
+  left: -11px;
+  top: 115px;
+}
+
+.rocket:before {
+  position: absolute;
+  content: "";
+  background-color: #39beff;
+  height: 20px;
+  width: 55px;
+  z-index: -1;
+  border-radius: 50% 50% 0 0;
+  right: -15px;
+  bottom: 0;
+}
+
+.rocket:after {
+  position: absolute;
+  content: "";
+  background-color: #39beff;
+  height: 4px;
+  width: 15px;
+  border-radius: 0 0 2px 2px;
+  bottom: -4px;
+  left: 4.3px;
+}
+
+.window {
+  position: relative;
+  height: 10px;
+  width: 10px;
+  background-color: #151845;
+  border: 2px solid #b8d2ec;
+  border-radius: 50%;
+  top: 15px;
+  left: 5px;
+}

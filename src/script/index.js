@@ -27,3 +27,4 @@ import '../comps/hand/hand.js';
 import '../comps/hamster/hamster.js';
 import '../comps/bicycle/bicycle.js';
 import '../comps/typewriter/typewriter.js';
+import '../comps/orbit/orbit.js';
