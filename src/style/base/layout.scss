@@ -457,10 +457,10 @@ hamster-anim {
 
 bicycle-anim {
     position: absolute;
-    top: 9px;
+    top: -34px;
     z-index: 1;
-    right: 39px;
-    transform: scale(0.25);
+    left: -33px;
+    transform: scale(0.2);
     opacity: 0.7;
 }
 
@@ -468,7 +468,7 @@ typewriter-anim {
     position: absolute;
     top: 25px;
     z-index: 1;
-    right: -15px;
+    right: 0;
     transform: scale(0.5);
     opacity: 0.6;
 }

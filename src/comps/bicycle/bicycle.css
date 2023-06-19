@@ -1,20 +1,22 @@
 .loader {
+  --trans-dur: 1.5s;
   display: block;
   width: 150px;
   height: auto;
+  transform: translateX(0px);
+  animation: leftToRight 8s ease-in-out infinite;
 }
 
 .loader_body,
-  .loader_front,
-  .loader_handlebars,
-  .loader_pedals,
-  .loader_pedals-spin,
-  .loader_seat,
-  .loader_spokes,
-  .loader_spokes-spin,
-  .loader_tire {
+.loader_front,
+.loader_handlebars,
+.loader_pedals,
+.loader_pedals-spin,
+.loader_seat,
+.loader_spokes,
+.loader_spokes-spin,
+.loader_tire {
   animation: bikeBody 8s ease-in-out infinite;
-  stroke: var(--primary);
   transition: stroke var(--trans-dur);
 }
 
@@ -39,7 +41,7 @@
 }
 
 .loader_spokes,
-  .loader_tire {
+.loader_tire {
   stroke: currentColor;
 }
 
@@ -55,7 +57,7 @@
   animation-name: bikeTire;
 }
 
-  /* Dark theme */
+/* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: hsl(var(--hue), 90%, 10%);
@@ -63,14 +65,14 @@
   }
 }
 
-  /* Animations */
+/* Animations */
 @keyframes bikeBody {
   from {
     stroke-dashoffset: 79;
   }
 
   33%,
-    67% {
+  67% {
     stroke-dashoffset: 0;
   }
 
@@ -85,7 +87,7 @@
   }
 
   33%,
-    67% {
+  67% {
     stroke-dashoffset: 0;
   }
 
@@ -100,7 +102,7 @@
   }
 
   33%,
-    67% {
+  67% {
     stroke-dashoffset: 0;
   }
 
@@ -116,7 +118,7 @@
   }
 
   33%,
-    67% {
+  67% {
     animation-timing-function: ease-out;
     stroke-dashoffset: -21.991;
   }
@@ -142,7 +144,7 @@
   }
 
   33%,
-    67% {
+  67% {
     stroke-dashoffset: 0;
   }
 
@@ -158,7 +160,7 @@
   }
 
   33%,
-    67% {
+  67% {
     animation-timing-function: ease-out;
     stroke-dashoffset: -23.562;
   }
@@ -200,4 +202,19 @@
     stroke-dashoffset: -56.549;
     transform: rotate(1turn);
   }
+}
+
+@keyframes leftToRight {
+  0% {
+    transform: translateX(0px);
+  }
+
+  99% {
+    transform: translateX(760px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+
 }
