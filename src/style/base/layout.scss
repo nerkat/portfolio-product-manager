@@ -383,10 +383,9 @@ body {
     .contact-icons {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        padding: 20px;
-        gap: 40px;
+        padding: 20px 30px;
 
         img {
             transition: $transition;
