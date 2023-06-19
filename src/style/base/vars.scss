@@ -4,6 +4,7 @@
 
 //backgrounds
 $background-image: url("/src/assets/images/back.webp");
+$background-avatar: url("/src/assets/images/avatar-back.webp");
 
 // colors
 
@@ -41,6 +42,39 @@ $text-shadow-1: 0px 4px 4px rgba(0, 0, 0, 0.25);
         opacity: 1;
     }
 }
+
+// breath animation
+@keyframes breath {
+    0% {
+        background-size: 100%;
+    }
+
+    50% {
+        background-size: 120%;
+    }
+
+    100% {
+        background-size: 100%;
+    }
+}
+
+@keyframes breath2 {
+    0% {
+        transform: scale(1.05);
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1);
+        filter: hue-rotate(10deg);
+    }
+
+    100% {
+        transform: scale(1.05);
+        filter: hue-rotate(0deg);
+    }
+}
+
 
 // fonts
 
