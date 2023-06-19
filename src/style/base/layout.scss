@@ -53,6 +53,7 @@ body {
     height: 100%;
     padding: 62px;
     overflow-y: auto;
+    overflow-x: hidden;
     height: calc(100svh - 124px);
     flex-wrap: wrap;
     justify-content: center;
