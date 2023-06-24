@@ -11,6 +11,7 @@ Splide.defaults = {
     "pauseOnHover": false,
     "pauseOnFocus": false,
     "easing": "ease-in-out",
+    "snap": true,
     "perPage": 2,
     "perMove": 1,
     "breakpoints": {
