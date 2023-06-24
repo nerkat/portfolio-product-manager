@@ -181,18 +181,14 @@ body {
         position: relative;
         display: flex;
         overflow: hidden;
-        background-image: $background-avatar;
         background-size: 100%;
         background-position: center;
-        animation: breathUp 15s ease-in-out infinite;
 
         img {
             animation: breathDown 5s ease-in-out;
             max-width: 100%;
-            transform: scale(1);
             max-height: 100%;
             object-fit: cover;
-            transition: $transition;
         }
 
         h1 {

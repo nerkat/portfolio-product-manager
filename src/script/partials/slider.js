@@ -6,6 +6,7 @@ Splide.defaults = {
     "arrows": false,
     "pagination": false,
     "interval": "5500",
+    "drag": "free",
     "speed": "2500",
     "pauseOnHover": false,
     "pauseOnFocus": false,
