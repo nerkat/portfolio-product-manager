@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    mode: 'production',  
+    mode: 'production',
     entry: {
         main: './src/script/index.js',
     },
@@ -32,6 +32,16 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
+            {
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
@@ -55,7 +65,7 @@ module.exports = {
                 use: 'html-loader'
             },
             {
-                test: /\.(png|jpg)$/i,
+                test: /\.(png|jpg|webp)$/,
                 type: 'asset/resource',
                 generator: {
                     filename: 'images/[name]-[hash][ext]'
@@ -74,4 +84,7 @@ module.exports = {
         static: './dist',
         open: true,
     },
+    performance: {
+        hints: false
+    }
 };

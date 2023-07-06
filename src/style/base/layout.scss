@@ -9,7 +9,6 @@ body {
     font-family: $font-family;
     color: $white;
     text-shadow: $text-shadow-1;
-    overflow: hidden;
     padding: 0;
     margin: 0;
 }
@@ -39,25 +38,8 @@ p {
 }
 
 body {
-    background-image: $grd-1;
-}
-
-
-.container {
-    background-image: $background-image;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: none;
-    gap: 35px;
-    height: 100%;
-    padding: 62px;
-    overflow-y: auto;
     overflow-x: hidden;
-    height: calc(100svh - 124px);
-    flex-wrap: wrap;
-    justify-content: center;
-
+    background-image: $grd-1;
 
     &::-webkit-scrollbar {
         width: 5px;
@@ -75,8 +57,21 @@ body {
     }
 }
 
+.masonry-container {
+    position: relative;
+    background-image: $background-image;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 35px 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    opacity: 0;
 
-
+    .card {
+        position: absolute;
+    }
+}
 
 .column {
     display: flex;
@@ -96,7 +91,7 @@ body {
     background: $grd-2;
     box-shadow: $box-shadow-1;
     position: relative;
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 4s ease-in-out;
     border-radius: 25px;
     overflow: hidden;
 
@@ -186,8 +181,8 @@ body {
 
         img {
             animation: breathDown 5s ease-in-out;
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -315,7 +310,7 @@ body {
         justify-content: center;
         align-items: center;
         overflow: visible;
-        height: 230px;
+        aspect-ratio: 13/6;
 
         .card-content {
             width: 100%;
@@ -373,8 +368,9 @@ body {
 
         img {
             transition: $transition;
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
