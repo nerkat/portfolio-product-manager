@@ -123,14 +123,17 @@ body {
             content: "";
             background: $grd-4;
             position: absolute;
-            top: auto;
-            bottom: 0;
-            left: 0;
-            right: auto;
             width: 100%;
             height: 100%;
             transition: $transition;
             transform: scale(0, 0);
+        }
+
+        &::after {
+            top: auto;
+            bottom: 0;
+            left: 0;
+            right: auto;
             transform-origin: bottom left;
         }
 
@@ -150,11 +153,8 @@ body {
 
         .hover-box {
 
+            &::before,
             &::after {
-                transform: scale(1, 1);
-            }
-
-            &::before {
                 transform: scale(1, 1);
             }
         }
